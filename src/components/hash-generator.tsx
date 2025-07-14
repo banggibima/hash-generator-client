@@ -3,7 +3,6 @@
 import { generateHash } from "@/app/actions";
 import { algorithms } from "@/constants/algorithms";
 import { useHashGeneratorStore } from "@/stores/use-hash-generator";
-import { useState } from "react";
 
 export function HashGenerator() {
   const {
@@ -19,8 +18,6 @@ export function HashGenerator() {
     setIsHashing,
     clearAll,
   } = useHashGeneratorStore();
-
-  const [value, setValue] = useState(50);
 
   const selectedAlgorithm = algorithms.find((a) => a.value === hashAlgorithm);
 
